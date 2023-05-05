@@ -32,3 +32,23 @@ To run in Production
 ```
 npm run start
 ```
+
+## Explanations
+
+You can also manually kill a thread
+
+### Main Thread Side
+
+```ts
+setTimeout(() => {
+  console.log(`[Main] Try to kill worker`);
+  myWorker.terminate();
+}, 3000);
+```
+
+After 3 000 milliseconds, main thread will try to kill his worker.
+
+## Next Chapter
+
+Multithreading 07 - Example : Prime Number
+https://github.com/thomaspiquet/nodejs-multithreading-07
